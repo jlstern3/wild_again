@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import {Router} from '@reach/router';
 import CreateProduct from './components/CreateProduct';
+import AllProducts from './components/AllProducts';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <h3>A Sustainable Guide to Living</h3>
       <Router>
         <CreateProduct path = "/api/products/new" />
+        <AllProducts default path = "/api/products" />
       </Router>
     </div>
   );
