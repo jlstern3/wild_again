@@ -10,11 +10,11 @@ app.use(express.urlencoded({extended: true}));
 app.use(cors());
 
 
-
 // connect mongoose
 require('./config/mongoose.config');
 
 // connect routes
 require('./routes/product.route') (app);
 
+// have server listen on port
 app.listen(port, () => console.log(`Server is listening on Port ${port}`));
