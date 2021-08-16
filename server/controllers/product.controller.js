@@ -39,3 +39,16 @@ module.exports.getSingleProduct = (req, res) => {
             res.json(err);
         })
 }
+
+module.exports.deleteProduct = (req, res) => {
+    console.log("Inside deleteProduct");
+    Product.findByIdAndDelete(req.params.id)
+        .then((deletedProduct) => {
+            console.log(deletedProduct);
+            res.json(deletedProduct);
+        })
+        .catch((err)=> {
+            console.log(err);
+            res.json(err);
+        })
+}
