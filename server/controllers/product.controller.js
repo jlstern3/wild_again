@@ -52,3 +52,19 @@ module.exports.deleteProduct = (req, res) => {
             res.json(err);
         })
 }
+
+module.exports.updateProduct = (req, res) =>{
+    console.log("Inside updateProduct");
+    Product.findByIdAndUpdate(req.params.id, req.body, {
+        new: true,
+        runValidators: true
+    })
+        .then((updatedProduct) => {
+            console.log(updatedProduct);
+            res.json(updatedProduct);
+        })
+        .catch((err) => {
+            console.log(err);
+            res.json(err);
+        })
+}
