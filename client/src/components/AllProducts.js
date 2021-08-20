@@ -25,7 +25,7 @@ const AllProducts = (props) => {
                     console.log("this is a new product: " + product.title);
                     return(
                         <div key = {index}>
-                            <Link to= {'api/products' + product._id}>{product.title}</Link>
+                            <Link to= {'/api/products/' + product._id}>{product.title}</Link>
                         </div>
                     )
                 })
