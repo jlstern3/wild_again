@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link, navigate } from '@reach/router';
 import ProductForm from './ProductForm';
 import {Button} from '@material-ui/core';
+import DeleteProduct from './DeleteProduct';
 
 const EditProduct = (props) => {
     const { id } = props;
@@ -27,6 +28,10 @@ const EditProduct = (props) => {
             .catch(err => console.log(err));
     }
 
+    const afterDeleteHandler = () => {
+        navigate ('/api/products');
+    }
+
     return (
         <div>
             <ProductForm
@@ -35,8 +40,9 @@ const EditProduct = (props) => {
                 handleSubmit={handleSubmit}
                 submitButtonLabel={"Update Product"} />
             <Link to={"/api/products"}><Button variant="contained" color = "primary">Back to All Products</Button></Link>
-            <Link to={'/api/products'}><Button variant="contained" color="secondary">Delete {product.title}</Button></Link>
-
+            <DeleteProduct
+                id={props.id}
+                afterDeleteHandler = {afterDeleteHandler}/>
         </div>
     )
 }
