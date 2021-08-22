@@ -4,6 +4,8 @@ import axios from 'axios';
 import {Router} from '@reach/router';
 import CreateProduct from './components/CreateProduct';
 import AllProducts from './components/AllProducts';
+import EditProduct from './components/EditProduct';
+import ProductDetails from './components/ProductDetails';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Router>
         <CreateProduct path = "/api/products/new" />
         <AllProducts default path = "/api/products" />
+        <ProductDetails path="/api/products/:id" />
+        <EditProduct path = "/api/products/:id/edit" />
       </Router>
     </div>
   );
