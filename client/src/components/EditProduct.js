@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link, navigate } from '@reach/router';
 import ProductForm from './ProductForm';
+import {Button} from '@material-ui/core';
 
 const EditProduct = (props) => {
     const { id } = props;
@@ -20,13 +21,9 @@ const EditProduct = (props) => {
         e.preventDefault(e);
         axios.put("http://localhost:8000/api/products/" + id, product)
             .then((res) => {
-                if (res.data.errors) {
-                    setErrors(res.data.errors)
-                }
-                else {
-                    navigate('api/products/' + id)
-                }
-            })
+                navigate('api/products/' + id)
+            }
+            )
             .catch(err => console.log(err));
     }
 
@@ -35,10 +32,10 @@ const EditProduct = (props) => {
             <ProductForm
                 product={product}
                 setProduct={setProduct}
-                errors={errors}
                 handleSubmit={handleSubmit}
                 submitButtonLabel={"Update Product"} />
-            <Link to={"/api/products"}><button>Back to All Products</button></Link>
+            <Link to={"/api/products"}><Button variant="contained" color = "primary">Back to All Products</Button></Link>
+            <Link to={'/api/products'}><Button variant="contained" color="secondary">Delete {product.title}</Button></Link>
 
         </div>
     )
