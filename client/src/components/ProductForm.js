@@ -1,4 +1,5 @@
 import React from 'react';
+import {Button} from '@material-ui/core';
 
 const ProductForm = (props) => {
     const {product, setProduct, handleSubmit, submitButtonLabel} = props;
@@ -33,7 +34,7 @@ const ProductForm = (props) => {
                         value = {product.description}
                         onChange = {(e) => inputChange(e)} />
                 </p>
-                <button type = "submit">{submitButtonLabel}</button>
+                <Button type = "submit" type="contained">{submitButtonLabel}</Button>
             </form>
         </div>
     )
