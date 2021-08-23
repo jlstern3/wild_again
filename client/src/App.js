@@ -6,6 +6,7 @@ import CreateProduct from './components/CreateProduct';
 import AllProducts from './components/AllProducts';
 import EditProduct from './components/EditProduct';
 import ProductDetails from './components/ProductDetails';
+import TabPanel from './components/TabPanel';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <ProductDetails path="/api/products/:id" />
         <EditProduct path = "/api/products/:id/edit" />
       </Router>
+      <TabPanel />
     </div>
   );
 }
