@@ -1,4 +1,17 @@
 *{
   padding: 0;
   margin: 0;
+  font-family: fantasy;
 }
+
+.App {
+  max-width: 600px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: rgb(212, 235, 224);
+  padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+} 
