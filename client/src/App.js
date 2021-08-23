@@ -7,6 +7,7 @@ import AllProducts from './components/AllProducts';
 import EditProduct from './components/EditProduct';
 import ProductDetails from './components/ProductDetails';
 import TabPanel from './components/TabPanel';
+import ImageList from './components/ImageList';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <EditProduct path = "/api/products/:id/edit" />
       </Router>
       <TabPanel />
+      <ImageList />
     </div>
   );
 }
