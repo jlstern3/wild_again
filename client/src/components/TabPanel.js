@@ -58,25 +58,6 @@ export default function ScrollableTabsButtonAuto() {
 
     return (
         <div className={classes.root}>
-            <AppBar position="static" color="default">
-                <Tabs
-                    value={value}
-                    onChange={handleChange}
-                    indicatorColor="primary"
-                    textColor="primary"
-                    variant="scrollable"
-                    scrollButtons="auto"
-                    aria-label="scrollable auto tabs example"
-                >
-                    <Tab label="Item One" {...a11yProps(0)} />
-                    <Tab label="Item Two" {...a11yProps(1)} />
-                    <Tab label="Item Three" {...a11yProps(2)} />
-                    <Tab label="Item Four" {...a11yProps(3)} />
-                    <Tab label="Item Five" {...a11yProps(4)} />
-                    <Tab label="Item Six" {...a11yProps(5)} />
-                    <Tab label="Item Seven" {...a11yProps(6)} />
-                </Tabs>
-            </AppBar>
             <TabPanel value={value} index={0}>
                 Examples of Household Items
             </TabPanel>
@@ -98,6 +79,26 @@ export default function ScrollableTabsButtonAuto() {
             <TabPanel value={value} index={6}>
                 Examples of Outdoor Gear
             </TabPanel>
+            <AppBar position="static" color="default">
+                <Tabs
+                    value={value}
+                    onChange={handleChange}
+                    indicatorColor="primary"
+                    textColor="primary"
+                    variant="scrollable"
+                    scrollButtons="auto"
+                    aria-label="scrollable auto tabs example"
+                >
+                    <Tab label="Household Items" {...a11yProps(0)} />
+                    <Tab label="Cleaning Products" {...a11yProps(1)} />
+                    <Tab label="Laundry" {...a11yProps(2)} />
+                    <Tab label="Home System Designs" {...a11yProps(3)} />
+                    <Tab label="Personal Hygiene" {...a11yProps(4)} />
+                    <Tab label="Clothing" {...a11yProps(5)} />
+                    <Tab label="Outdoor Gear" {...a11yProps(6)} />
+                </Tabs>
+            </AppBar>
+
         </div>
     );
 }
