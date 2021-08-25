@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <h1>Wild Again</h1>
-      <h3>A Sustainable Guide to Living</h3>
+      <h3>Your Sustainable Guide to Living</h3>
       <Router>
         <CreateProduct path = "/api/products/new" />
         <AllProducts default path = "/api/products" />
