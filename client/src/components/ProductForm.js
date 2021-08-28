@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button} from '@material-ui/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ProductForm = (props) => {
     const {product, setProduct, handleSubmit, submitButtonLabel} = props;
@@ -34,7 +35,7 @@ const ProductForm = (props) => {
                         value = {product.description}
                         onChange = {(e) => inputChange(e)} />
                 </p>
-                <Button type = "submit" type="contained">{submitButtonLabel}</Button>
+                <Button type = "submit" type="contained"><FontAwesomeIcon icon = "pen"></FontAwesomeIcon>{submitButtonLabel}</Button>
             </form>
         </div>
     )
