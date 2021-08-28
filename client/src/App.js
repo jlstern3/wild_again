@@ -9,15 +9,15 @@ import TabPanel from './components/TabPanel';
 import ImageList from './components/ImageList';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faChevronCircleLeft, faPen, faTrashAlt, faLightbulb } from '@fortawesome/free-solid-svg-icons'
+import { faChevronCircleLeft, faPen, faTrashAlt, faLightbulb, faEdit } from '@fortawesome/free-solid-svg-icons'
 
-library.add(fab, faChevronCircleLeft, faTrashAlt, faPen, faLightbulb )
+library.add(fab, faChevronCircleLeft, faTrashAlt, faPen, faLightbulb, faEdit )
 
 function App() {
   return (
     <div className="App">
       <h1>Wild Again</h1>
-      <h3>Your Sustainable Guide to Living</h3>
+      <h3 id="subtitle">Your Sustainable Guide to Living</h3>
       <Router>
         <CreateProduct path = "/api/products/new" />
         <AllProducts default path = "/api/products" />
