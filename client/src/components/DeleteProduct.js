@@ -20,7 +20,7 @@ const DeleteProduct = (props) => {
     }
     return(
         <div>
-            <Button type="contained" color="secondary" onClick={(e)=>deleteHandler(e,id)}><FontAwesomeIcon icon = "trash-alt"></FontAwesomeIcon>Delete Product</Button>
+            <FontAwesomeIcon icon="trash-alt" onClick={(e)=>deleteHandler(e,id)}></FontAwesomeIcon>
         </div>
     )
 }
