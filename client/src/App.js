@@ -1,6 +1,5 @@
 import './App.css';
-import React, {useState} from 'react';
-import axios from 'axios';
+import React from 'react';
 import {Router} from '@reach/router';
 import CreateProduct from './components/CreateProduct';
 import AllProducts from './components/AllProducts';
@@ -8,6 +7,11 @@ import EditProduct from './components/EditProduct';
 import ProductDetails from './components/ProductDetails';
 import TabPanel from './components/TabPanel';
 import ImageList from './components/ImageList';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab, faChevronCircleLeft )
 
 function App() {
   return (
