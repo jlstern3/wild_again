@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link, navigate } from '@reach/router';
 import ProductForm from './ProductForm';
-import { Button } from '@material-ui/core';
 import DeleteProduct from './DeleteProduct';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -42,7 +41,6 @@ const EditProduct = (props) => {
                 setProduct={setProduct}
                 handleSubmit={handleSubmit}
                 submitButtonLabel={"Update Product"} />
-            <Link to={"/api/products"}><Button variant="contained" color="primary">Back to All Products</Button></Link>
             <DeleteProduct
                 id={props.id}
                 afterDeleteHandler={afterDeleteHandler} />
