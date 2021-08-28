@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from '@reach/router';
 import { Button } from '@material-ui/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const AllProducts = (props) => {
     const [products, setProducts] = useState([]);
@@ -29,7 +30,7 @@ const AllProducts = (props) => {
                 })
             }
             {/* Button to create new product */}
-            <Link to={'/api/products/new'}><Button type="submit" variant="contained" color="primary">Create New Product</Button></Link>
+            <Link to={'/api/products/new'}><Button type="submit" variant="contained" color="primary"><FontAwesomeIcon icon="lightbulb"></FontAwesomeIcon>Create New Product</Button></Link>
 
         </div>
     )
