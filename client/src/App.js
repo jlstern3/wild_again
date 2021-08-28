@@ -9,9 +9,9 @@ import TabPanel from './components/TabPanel';
 import ImageList from './components/ImageList';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons'
+import { faChevronCircleLeft, faPen, faTrashAlt, faLightbulb } from '@fortawesome/free-solid-svg-icons'
 
-library.add(fab, faChevronCircleLeft )
+library.add(fab, faChevronCircleLeft, faTrashAlt, faPen, faLightbulb )
 
 function App() {
   return (
