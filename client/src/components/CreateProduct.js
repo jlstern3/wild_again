@@ -9,12 +9,20 @@ const CreateProduct = (props) => {
         description: "",
     });
 
+    const[errors, setErrors] = useState({});
+
     const handleSubmit = (e) => {
         e.preventDefault();
         axios.post('http://localhost:8000/api/products', product)
             .then((res) => {
                 console.log(res.data);
-                navigate('/api/products');
+                if(res.data.errors){
+                    setErrors(res.data.errors);
+                }
+                else{
+                    setProduct(res);
+                    navigate('/api/products');
+                }
             })
             .catch((err) => {
                 console.log(err);
@@ -27,6 +35,7 @@ const CreateProduct = (props) => {
             <ProductForm 
                 product = {product}
                 setProduct = {setProduct}
+                errors={errors}
                 handleSubmit = {handleSubmit}
                 submitButtonLabel = {"Create Product"}
             />
