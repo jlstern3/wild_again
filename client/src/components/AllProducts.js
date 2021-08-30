@@ -30,7 +30,7 @@ const AllProducts = (props) => {
                 })
             }
             {/* Button to create new product */}
-            <Link to={'/api/products/new'}><Button type="submit" variant="contained" color="primary"><FontAwesomeIcon icon="lightbulb"></FontAwesomeIcon>Create New Product</Button></Link>
+            <Link to={'/api/products/new'}><Button type="submit" variant="contained" color="primary"><FontAwesomeIcon icon="plus"></FontAwesomeIcon>Create New Product</Button></Link>
 
         </div>
     )

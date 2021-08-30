@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Alert } from 'reactstrap';
+import { Link } from '@reach/router';
 
 const ProductForm = (props) => {
     const { errors, product, setProduct, handleSubmit, submitButtonLabel } = props;
@@ -19,6 +20,9 @@ const ProductForm = (props) => {
 
     return (
         <div>
+            <Link to={'/api/products'}>
+                <FontAwesomeIcon icon="chevron-circle-left"></FontAwesomeIcon></Link>
+
             <form onSubmit={(e) => handleSubmit(e)}>
                 <p>
                     <label>Title:</label>
@@ -46,7 +50,7 @@ const ProductForm = (props) => {
                         value={product.description}
                         onChange={(e) => inputChange(e)} />
                 </p>
-                <Button type="submit" type="contained"><FontAwesomeIcon icon="pen"></FontAwesomeIcon>{submitButtonLabel}</Button>
+                <Button type="submit" type="contained"><FontAwesomeIcon icon="plus"></FontAwesomeIcon>{submitButtonLabel}</Button>
             </form>
         </div>
     )
