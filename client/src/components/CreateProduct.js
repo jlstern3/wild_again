@@ -1,15 +1,29 @@
 import React, {useState} from 'react';
 import ProductForm from './ProductForm';
 import axios from 'axios';
-import {navigate} from '@reach/router';
+import {Link, navigate} from '@reach/router';
 
 const CreateProduct = (props) => {
+    const[errors, setErrors] = useState({});
+
     const[product, setProduct] = useState({
-        title: "",
-        description: "",
+        "title": "",
+        "description": "",
+        "category": "",
     });
 
-    const[errors, setErrors] = useState({});
+    // const category = [
+    //     'Grocery', 
+    //     'Cleaning', 
+    //     'Personal Hygiene',
+    //     'Household',
+    //     'Outdoor Systems',
+    //     'Adventure Gear',
+    //     'Clothing',
+    //     'Miscellaneous',
+    // ];
+
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
