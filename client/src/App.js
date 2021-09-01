@@ -9,11 +9,11 @@ import TabPanel from './components/TabPanel';
 import ImageList from './components/ImageList';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faChevronCircleLeft, faPen, faTrashAlt, faLightbulb, faEdit } from '@fortawesome/free-solid-svg-icons'
+import { faChevronCircleLeft, faPen, faTrashAlt, faLightbulb, faEdit, faPlus } from '@fortawesome/free-solid-svg-icons'
 import Contact from './components/Contact';
 import {Button} from '@material-ui/core';
 
-library.add(fab, faChevronCircleLeft, faTrashAlt, faPen, faLightbulb, faEdit )
+library.add(fab, faChevronCircleLeft, faTrashAlt, faPen, faLightbulb, faEdit, faPlus )
 
 function App() {
   return (

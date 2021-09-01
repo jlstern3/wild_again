@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link, navigate } from '@reach/router';
-import { Button } from '@material-ui/core';
 import DeleteProduct from './DeleteProduct';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
