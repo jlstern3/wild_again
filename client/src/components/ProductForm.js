@@ -8,15 +8,15 @@ const ProductForm = (props) => {
     const { errors, product, setProduct, handleSubmit, submitButtonLabel } = props;
 
     const category = [
-        'Grocery', 
-        'Cleaning', 
+        'Grocery',
+        'Cleaning',
         'Personal Hygiene',
         'Household',
         'Outdoor Systems',
         'Adventure Gear',
         'Clothing',
         'Miscellaneous',
-    ]; 
+    ];
 
     const inputChange = (e) => {
         console.log('input name: ' + e.target.name);
@@ -26,15 +26,20 @@ const ProductForm = (props) => {
         let newProductObject = { ...product };
         // set new values to the copied object
         newProductObject[e.target.name] = e.target.value;
+        newProductObject.photo = e.target.files[0];
         setProduct(newProductObject);
     }
+
+    // const handlePhoto = (e) =>{
+    //     newProductObject = {...product, photo: e.target.files[0]};
+    // }
 
     return (
         <div>
             <Link to={'/api/products'}>
                 <FontAwesomeIcon icon="chevron-circle-left"></FontAwesomeIcon></Link>
 
-            <form onSubmit={(e) => handleSubmit(e)}>
+            <form onSubmit={(e) => handleSubmit(e)} encType='multipart/form-data'>
                 <p>
                     <label>Title:</label>
                     {
@@ -65,8 +70,8 @@ const ProductForm = (props) => {
                     <label>Category: </label>
                     {
                         errors.category ?
-                        <span className="errors"><Alert color="danger">{errors.category.message}</Alert></span>
-                        : null
+                            <span className="errors"><Alert color="danger">{errors.category.message}</Alert></span>
+                            : null
                     }
                     <select
                         name="category"
@@ -79,7 +84,14 @@ const ProductForm = (props) => {
                                 <option value={productCategory} key={index}>{productCategory}</option>
                             ))
                         }
-                        </select>
+                    </select>
+                    <label>Photo: </label>
+                    <input
+                        type="file"
+                        name="photo"
+                        accept=".png, .jpg, .jpeg"
+                        onChange={(e) => inputChange(e)}
+                    />
                 </div>
                 <Button type="submit" type="contained"><FontAwesomeIcon icon="plus"></FontAwesomeIcon>{submitButtonLabel}</Button>
             </form>
