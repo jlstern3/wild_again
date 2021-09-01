@@ -25,6 +25,7 @@ const ProductDetails = (props) => {
             <h3>Product Details</h3>
             <h5>Title: {product.title}</h5>
             <h5>Description: {product.description}</h5>
+            <h5>Category: {product.category}</h5>
             <Link to={'/api/products'}>
                 <FontAwesomeIcon icon="chevron-circle-left"></FontAwesomeIcon></Link>
             <Link to={'/api/products/' + props.id + '/edit'}><FontAwesomeIcon icon="edit"></FontAwesomeIcon></Link>
