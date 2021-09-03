@@ -9,6 +9,8 @@ import InfoIcon from '@material-ui/icons/Info';
 // import itemData from './itemData';
 import image from '../img/AlderleafLogo.jpg';
 import umich from '../img/Umich.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {Link, navigate} from '@reach/router';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -45,6 +47,8 @@ export default function TitlebarImageList() {
 
     return (
         <div className={classes.root}>
+                        <Link to={'/api/home'}>
+                <FontAwesomeIcon icon="chevron-circle-left"></FontAwesomeIcon></Link>
             <h2>Always Shop Local!</h2>
             <ImageList rowHeight={180} className={classes.imageList}>
                 <ImageListItem key="Subheader" cols={2} style={{ height: 'auto' }}>
