@@ -6,11 +6,13 @@ import ImageListItemBar from '@material-ui/core/ImageListItemBar';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
-// import itemData from './itemData';
 import image from '../img/AlderleafLogo.jpg';
 import umich from '../img/Umich.jpg';
+import rtr from '../img/RaiseTheRoot.jpg';
+import pfc from '../img/Co-op.jpg';
+import argus from '../img/Argus.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {Link, navigate} from '@reach/router';
+import { Link, navigate } from '@reach/router';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -33,13 +35,30 @@ const itemData = [
     {
         img: image,
         title: 'Placeholder Image',
-        author: 'Jess',
+        website: 'Jess',
     },
     {
         img: umich,
         title: "Umich logo",
-        author: "Someone who's now rich",
-    }
+        website: "Someone who's now rich",
+    },
+    {
+        img: rtr,
+        title: "Raise the Root",
+        website: "https://www.raisetherootonline.com/",
+    },
+    {
+        img: argus,
+        title: "Argus Farm Stop",
+        website: "https://www.argusfarmstop.com/",
+    },
+    {
+        img: pfc,
+        title: "People's Food Co-op",
+        website: "https://peoplesfood.coop/newsite/",
+    },
+
+
 ]
 
 export default function TitlebarImageList() {
@@ -47,9 +66,9 @@ export default function TitlebarImageList() {
 
     return (
         <div className={classes.root}>
-                        <Link to={'/api/home'}>
+            <Link to={'/api/home'}>
                 <FontAwesomeIcon icon="chevron-circle-left"></FontAwesomeIcon></Link>
-            <h2>Always Shop Local!</h2>
+            <h2>Ann Arbor Resources</h2>
             <ImageList rowHeight={180} className={classes.imageList}>
                 <ImageListItem key="Subheader" cols={2} style={{ height: 'auto' }}>
                     <ListSubheader component="div">December</ListSubheader>
@@ -59,7 +78,7 @@ export default function TitlebarImageList() {
                         <img src={item.img} alt={item.title} />
                         <ImageListItemBar
                             title={item.title}
-                            subtitle={<span>by: {item.author}</span>}
+                            subtitle={<span><a href={item.website} class="img-list-websites">{item.website}</a></span>}
                             actionIcon={
                                 <IconButton aria-label={`info about ${item.title}`} className={classes.icon}>
                                     <InfoIcon />
