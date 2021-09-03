@@ -10,19 +10,27 @@ const CreateProduct = (props) => {
         "title": "",
         "description": "",
         "category": "",
+        "notes": "",
+        // "photo": "",
     });
 
-    // const category = [
-    //     'Grocery', 
-    //     'Cleaning', 
-    //     'Personal Hygiene',
-    //     'Household',
-    //     'Outdoor Systems',
-    //     'Adventure Gear',
-    //     'Clothing',
-    //     'Miscellaneous',
-    // ];
 
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     const formData = new FormData();
+    //     formData.append('photo', product.photo);
+    //     formData.append('title', product.title);
+    //     formData.append('description', product.description);
+    //     formData.append('category', product.category);
+
+    //     axios.post('http://localhost:8000/api/products', formData)
+    //         .then(res => {
+    //             console.log(res);
+    //         })
+    //         .catch(err => {
+    //             console.log(err);
+    //         });
+    // }
 
 
     const handleSubmit = (e) => {

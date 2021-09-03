@@ -24,11 +24,16 @@ const ProductSchema = new mongoose.Schema({
             'Clothing',
             'Miscellaneous',
         ],
-        // default: 'Miscellaneous',
+        default: 'Miscellaneous',
     },
-    photo: {
+    notes: {
         type: String,
-    },
+        required: false,
+    }
+    // photo: {
+    //     type: String,
+    //     required: false,
+    // },
 }, {timestamps: true});
 
 module.exports = mongoose.model("Product", ProductSchema);
