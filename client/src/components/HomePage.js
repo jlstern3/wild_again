@@ -3,14 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {Link} from '@reach/router';
 import TabPanel from './TabPanel';
 
-const Contact = (props) => {
-
-
+const HomePage = (props) => {
     return(
         <div>
-            <TabPanel></TabPanel>
+            <h1>This is the home page displaying</h1>
         </div>
     )
 }
 
-export default Contact;
+export default HomePage;
