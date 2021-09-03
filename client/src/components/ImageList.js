@@ -45,6 +45,7 @@ export default function TitlebarImageList() {
 
     return (
         <div className={classes.root}>
+            <h2>Always Shop Local!</h2>
             <ImageList rowHeight={180} className={classes.imageList}>
                 <ImageListItem key="Subheader" cols={2} style={{ height: 'auto' }}>
                     <ListSubheader component="div">December</ListSubheader>

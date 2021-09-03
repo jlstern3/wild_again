@@ -5,7 +5,7 @@ import CreateProduct from './components/CreateProduct';
 import AllProducts from './components/AllProducts';
 import EditProduct from './components/EditProduct';
 import ProductDetails from './components/ProductDetails';
-import TabPanel from './components/TabPanel';
+
 import ImageList from './components/ImageList';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -25,9 +25,9 @@ function App() {
         <AllProducts default path = "/api/products" />
         <ProductDetails path="/api/products/:id" />
         <EditProduct path = "/api/products/:id/edit" />
+        <ImageList path="/api/products/local"/>
       </Router>
-      <TabPanel />
-      <ImageList />
+
     </div>
   );
 }
