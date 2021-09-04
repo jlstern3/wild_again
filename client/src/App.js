@@ -21,8 +21,6 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <h1>Wild Again</h1>
-      <h3 id="subtitle">Your Sustainable Guide to Living</h3>
 
       <Router>
         <HomePage default path="/api/home" default />
