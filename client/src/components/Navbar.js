@@ -3,10 +3,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import Menu from '@material-ui/icons/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@material-ui/core/Menu';
+import {Link, navigate} from '@reach/router';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -16,26 +17,69 @@ const useStyles = makeStyles((theme) => ({
         marginRight: theme.spacing(2),
     },
     title: {
-        flexGrow: 1, 
+        flexGrow: 1,
     },
 }));
 
-export default function ButtonAppBar() {
+const Navbar = () => {
     const classes = useStyles();
+    //state to set dropdown menu
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+
+    //opens the menu dropdown to where mouse was clicked
+    const handleMenu = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    //closes the menu dropdown
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
 
     return (
         <div className={classes.root}>
-            <AppBar position="static" style={{background: '#3F6A48'}}>
+            <AppBar position="static" style={{ background: '#3F6A48' }}>
                 <Toolbar>
-                <Typography variant="h6" className={classes.title}>
+
+                    <Typography variant="h6" className={classes.title}>
                         Wild Again
                     </Typography>
-                <Button color="inherit">Live Sustainably</Button>
-                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                        <MenuIcon />
-                    </IconButton>
+                    <div>
+                        <IconButton
+                            edge="start"
+                            className={classes.menuButton}
+                            color="inherit"
+                            aria-label="menu"
+                            onClick={handleMenu}>
+                            <MenuIcon />
+                        </IconButton>
+                        <Menu
+                            id="menu-appbar"
+                            anchorEl={anchorEl}
+                            anchorOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
+                            keepMounted
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
+                            open={open}
+                            onClose={handleClose}
+                        >
+                            <MenuItem onClick={handleClose}><Link to="/api/home">Home</Link></MenuItem>
+                            <MenuItem onClick={handleClose}><Link to="/api/products/local">Shop Local</Link></MenuItem>
+                            <MenuItem onClick={handleClose}><Link to="/api/products">Your Products</Link></MenuItem>
+                            <MenuItem onClick={handleClose}><Link to="/api/products/new">Create Product</Link></MenuItem>
+                            <MenuItem onClick={handleClose}><Link to="/api/products/tips">Helpful Tips</Link></MenuItem>
+                        </Menu>
+                    </div>
                 </Toolbar>
             </AppBar>
         </div>
     );
 }
+
+export default Navbar;
