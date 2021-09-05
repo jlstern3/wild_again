@@ -59,10 +59,20 @@ export default function ScrollableTabsButtonAuto() {
     return (
         <div className={classes.root}>
             <TabPanel value={value} index={0}>
-                Examples of Household Items
+                <h3>General Tips for Household Items: </h3>
+                <ul>
+                    <li>Glass tupperware containers</li>
+                    <li>Washable napkins</li>
+                    <li>Reusable bamboo paper towel</li>
+                    <li>Compostable sponges</li>
+                </ul>
             </TabPanel>
             <TabPanel value={value} index={1}>
-                Examples of Cleaning Products
+            <ul>
+                    <li>1:1 vinegar:water cleaning spray</li>
+                    <li>Baking soda</li>
+                    <li>Mop that uses towels as mophead</li>
+                </ul>
             </TabPanel>
             <TabPanel value={value} index={2}>
                 Examples of Laundry
