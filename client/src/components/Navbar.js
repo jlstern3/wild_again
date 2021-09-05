@@ -7,7 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import {Link, navigate} from '@reach/router';
+import {Link} from '@reach/router';
 
 const useStyles = makeStyles((theme) => ({
     root: {

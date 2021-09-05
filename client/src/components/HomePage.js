@@ -1,8 +1,6 @@
-import React, {useState, useEffect} from 'react'; 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import TabPanel from './TabPanel';
+import React from 'react'; 
 import {Button} from '@material-ui/core';
-import { Link, navigate } from '@reach/router';
+import { Link } from '@reach/router';
 
 const HomePage = () => {
     return(
