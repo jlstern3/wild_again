@@ -11,6 +11,7 @@ import umich from '../img/Umich.jpg';
 import rtr from '../img/RaiseTheRoot.jpg';
 import pfc from '../img/Co-op.jpg';
 import argus from '../img/Argus.jpg';
+import byoc from '../img/BYOC.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, navigate } from '@reach/router';
 
@@ -33,9 +34,9 @@ const useStyles = makeStyles((theme) => ({
 
 const itemData = [
     {
-        img: image,
-        title: 'Placeholder Image',
-        website: 'Jess',
+        img: byoc,
+        title: 'BYOC Co.',
+        website: 'https://www.byocco.com/',
     },
     {
         img: umich,
