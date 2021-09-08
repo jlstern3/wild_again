@@ -67,11 +67,10 @@ export default function TitlebarImageList() {
     return (
         <div className={classes.root}>
             <Link to={'/api/home'}>
-                <FontAwesomeIcon icon="chevron-circle-left"></FontAwesomeIcon></Link>
-            <h2>Ann Arbor Resources</h2>
+                <FontAwesomeIcon icon="chevron-circle-left"></FontAwesomeIcon></Link>            
             <ImageList rowHeight={180} className={classes.imageList}>
                 <ImageListItem key="Subheader" cols={2} style={{ height: 'auto' }}>
-                    <ListSubheader component="div">December</ListSubheader>
+                    <ListSubheader component="div">Ann Arbor Resources</ListSubheader>
                 </ImageListItem>
                 {itemData.map((item) => (
                     <ImageListItem key={item.img}>
