@@ -19,7 +19,7 @@ const AllProducts = (props) => {
     return (
         <div>
             <Link to={'/api/home'}>
-                <FontAwesomeIcon icon="chevron-circle-left"></FontAwesomeIcon></Link>
+                <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link>
             <h3>All Products</h3>
             {
                 products.map((product, index) => {

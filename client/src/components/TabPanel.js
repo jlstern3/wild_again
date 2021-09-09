@@ -6,24 +6,31 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import { Link } from '@reach/router';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
     return (
-        <div
-            role="tabpanel"
-            hidden={value !== index}
-            id={`scrollable-auto-tabpanel-${index}`}
-            aria-labelledby={`scrollable-auto-tab-${index}`}
-            {...other}
-        >
-            {value === index && (
-                <Box p={3}>
-                    <Typography>{children}</Typography>
-                </Box>
-            )}
-        </div>
+
+            <div
+                role="tabpanel"
+                hidden={value !== index}
+                id={`scrollable-auto-tabpanel-${index}`}
+                aria-labelledby={`scrollable-auto-tab-${index}`}
+                {...other}
+            >
+                            <Link to={'/api/home'}>
+            
+            <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link>
+                {value === index && (
+                    <Box p={3}>
+                        <Typography>{children}</Typography>
+                    </Box>
+                )}
+            </div>
+
     );
 }
 
@@ -68,7 +75,7 @@ export default function ScrollableTabsButtonAuto() {
                 </ul>
             </TabPanel>
             <TabPanel value={value} index={1}>
-            <ul>
+                <ul>
                     <li>1:1 vinegar:water cleaning spray</li>
                     <li>Baking soda</li>
                     <li>Mop that uses towels as mophead</li>

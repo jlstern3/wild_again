@@ -68,7 +68,7 @@ export default function TitlebarImageList() {
     return (
         <div className={classes.root}>
             <Link to={'/api/home'}>
-                <FontAwesomeIcon icon="chevron-circle-left"></FontAwesomeIcon></Link>            
+                <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link>            
             <ImageList rowHeight={180} className={classes.imageList}>
                 <ImageListItem key="Subheader" cols={2} style={{ height: 'auto' }}>
                     <ListSubheader component="div">Ann Arbor Resources</ListSubheader>

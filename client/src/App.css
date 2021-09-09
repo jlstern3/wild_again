@@ -7,6 +7,7 @@
 .App {
   max-width: 600px;
   margin: auto;
+  height: 600px;
   border-radius: 5px;
   background-color: rgb(212, 235, 224);
   padding: 20px;
@@ -28,4 +29,11 @@ h1, h2, h4, h6 {
 
 .img-list-websites{
   color: white;
+}
+
+.back-icon{
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+  color: #DAA82C;
 }

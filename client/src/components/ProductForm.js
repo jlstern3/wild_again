@@ -48,7 +48,7 @@ const ProductForm = (props) => {
     return (
         <div>
             <Link to={'/api/products'}>
-                <FontAwesomeIcon icon="chevron-circle-left"></FontAwesomeIcon></Link>
+                <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link>
 
             {/* <form onSubmit={(e) => handleSubmit(e)} encType='multipart/form-data'> */}
             <form onSubmit={(e) => handleSubmit(e)}>
