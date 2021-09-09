@@ -6,11 +6,13 @@
 
 .App {
   max-width: 600px;
+  max-height: 600px;
   margin: auto;
   height: auto;
   border-radius: 5px;
   background-color: rgb(212, 235, 224);
   padding: 20px;
+  overflow-y: scroll;
 }
 
 h1, h2, h4, h6 {
@@ -56,6 +58,7 @@ h1, h2, h4, h6 {
 .product{
   margin: 20px;
   font-size: x-large;
+  color:rgb(94, 94, 104);
 }
 
 #delete-handler{

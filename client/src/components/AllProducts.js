@@ -20,6 +20,8 @@ const AllProducts = (props) => {
         <div>
             <Link to={'/api/home'}>
                 <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link>
+                <Link to={'/api/products/new'}><FontAwesomeIcon icon="plus" class="edit-icon"></FontAwesomeIcon></Link>
+
             <h3>All Products</h3>
             {
                 products.map((product, index) => {
@@ -31,8 +33,6 @@ const AllProducts = (props) => {
                     )
                 })
             }
-            {/* Button to create new product */}
-            <Link to={'/api/products/new'}><Button type="submit" variant="contained" color="primary"><FontAwesomeIcon icon="plus"></FontAwesomeIcon>Create New Product</Button></Link>
 
         </div>
     )
