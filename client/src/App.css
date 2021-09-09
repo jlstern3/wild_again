@@ -7,7 +7,7 @@
 .App {
   max-width: 600px;
   margin: auto;
-  height: 600px;
+  height: auto;
   border-radius: 5px;
   background-color: rgb(212, 235, 224);
   padding: 20px;
@@ -31,9 +31,34 @@ h1, h2, h4, h6 {
   color: white;
 }
 
+/* icons */
 .back-icon{
   width: 25px;
   height: 25px;
   margin: 10px;
   color: #DAA82C;
 }
+
+.edit-icon{
+  color: #047AF6;
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+}
+
+.delete-icon{
+  color: rgb(94, 94, 104);
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+}
+
+.product{
+  margin: 20px;
+  font-size: x-large;
+}
+
+#delete-handler{
+  display: inline-block;
+}
+

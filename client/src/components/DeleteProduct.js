@@ -19,8 +19,8 @@ const DeleteProduct = (props) => {
 			})
     }
     return(
-        <div>
-            <FontAwesomeIcon icon="trash-alt" onClick={(e)=>deleteHandler(e,id)}></FontAwesomeIcon>
+        <div id="delete-handler">
+            <FontAwesomeIcon icon="trash-alt" class="delete-icon" onClick={(e)=>deleteHandler(e,id)}></FontAwesomeIcon>
         </div>
     )
 }
