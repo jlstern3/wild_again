@@ -38,7 +38,12 @@ h1, h2, h4, h6 {
   width: 25px;
   height: 25px;
   margin: 10px;
+  color: #3F6A48;
+}
+
+.back-icon:hover, .edit-icon:hover, .delete-icon:hover{
   color: #DAA82C;
+  border: 1px solid #DAA82C;
 }
 
 .edit-icon{
@@ -54,7 +59,9 @@ h1, h2, h4, h6 {
   height: 25px;
   margin: 10px;
 }
-
+.MuiButtonBase-root:hover{
+  border: 1px solid #DAA82C;
+}
 .product{
   margin: 20px;
   font-size: x-large;
@@ -65,3 +72,18 @@ h1, h2, h4, h6 {
   display: inline-block;
 }
 
+#ann-arbor{
+  font-size:larger;
+  color: black;
+}
+/* a:hover, Link:hover, button:hover{
+  background-color: yellow;
+} */
+
+a{
+  display: inline-block;
+}
+
+.menuButton{
+  color: red;
+}
