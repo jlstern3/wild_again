@@ -103,3 +103,14 @@ a{
   align-items: center;
 }
 
+p{
+  margin: 20px 0;
+}
+
+input{
+  margin-left: 10px;
+}
+
+ul{
+  margin-left: 20px;
+}
