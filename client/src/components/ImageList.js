@@ -17,7 +17,7 @@ import byoc from '../img/BYOC.jpg';
 import aathrift from '../img/AAThrift.jpg';
 import mailshoppe from '../img/MailShoppe.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link, navigate } from '@reach/router';
+import { Link } from '@reach/router';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -94,11 +94,11 @@ export default function TitlebarImageList() {
 
     return (
         <div className={classes.root}>
-            <Link to={'/api/home'}>
-                <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link>            
             <ImageList rowHeight={180} className={classes.imageList}>
+
                 <ImageListItem key="Subheader" cols={2} style={{ height: 'auto' }}>
-                    <ListSubheader component="div" id="ann-arbor">Ann Arbor Resources</ListSubheader>
+                <Link to={'/api/home'} id="img-list-back">
+                <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link><ListSubheader component="div" id="ann-arbor">Ann Arbor Resources</ListSubheader>
                 </ImageListItem>
                 {itemData.map((item) => (
                     <ImageListItem key={item.img}>
