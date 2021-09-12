@@ -7,7 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import {Link, navigate} from '@reach/router';
+import {Link} from '@reach/router';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -42,9 +42,9 @@ const Navbar = () => {
             <AppBar position="static" style={{ background: '#3F6A48' }}>
                 <Toolbar>
 
-                    <Typography variant="h6" className={classes.title}>
+                    <Typography variant="h6" className={classes.title}><Link to="/api/home" id="app-title">
                         Wild Again
-                    </Typography>
+                    </Link></Typography>
                     <div>
                         <IconButton
                             edge="start"

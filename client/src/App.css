@@ -37,7 +37,7 @@ h1, h2, h4, h6 {
 .back-icon{
   width: 25px;
   height: 25px;
-  margin: 10px;
+  margin: 10px 15px;
   color: #3F6A48;
 }
 
@@ -50,18 +50,45 @@ h1, h2, h4, h6 {
   color: #047AF6;
   width: 25px;
   height: 25px;
-  margin: 10px;
+  margin: 10px 15px;
 }
 
 .delete-icon{
   color: rgb(94, 94, 104);
   width: 25px;
   height: 25px;
-  margin: 10px;
+  margin: 10px 15px;
+  cursor: pointer;
+  display: inline-block;
 }
+
+/* Base Buttons */
 .MuiButtonBase-root:hover{
   border: 1px solid #DAA82C;
 }
+
+button.MuiButtonBase-root{
+  border: 2px solid #3F6A48;
+  box-shadow: 7px 2px 2px #3F6A48;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  display: inline-block;
+}
+
+#add-new-product-btn{
+  display: block;
+}
+
+.home-pg-btns{
+  justify-content: space-between;
+  display: flex;
+  margin: 20px;
+}
+
 .product{
   margin: 10px;
   font-size: x-large;
@@ -76,18 +103,9 @@ h1, h2, h4, h6 {
 #ann-arbor{
   font-size:larger;
   color: black;
-}
-/* a:hover, Link:hover, button:hover{
-  background-color: yellow;
-} */
-
-a{
   display: inline-block;
 }
 
-.menuButton{
-  color: red;
-}
 
 .user-made-products{
   text-decoration: none;
@@ -98,19 +116,46 @@ a{
   text-decoration-color: #DAA82C;
 }
 
-#align-btns{
-  display: flex;
-  align-items: center;
-}
-
-p{
-  margin: 20px 0;
-}
-
 input{
   margin-left: 10px;
 }
 
 ul{
   margin-left: 20px;
+}
+
+
+/* Form Labels */
+#app-title{
+  text-decoration: none;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.product-details, .form-label{
+  margin: 15px;
+  font-size: 1.3rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font: weight 200px;
+}
+
+#product-details-title, #edit-title, #create-product-title, #all-products-title{
+  margin: 20px;
+  font-size: 1.6rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  display: inline-block;
+  text-align: center;
+}
+
+.product-details-input, .form-input{
+  font-size: 1.2rem;
+}
+
+p{
+  margin-bottom: 15px;
+}
+
+#edit-title{
+  margin-bottom: 30px;
 }

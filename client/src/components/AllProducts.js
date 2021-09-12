@@ -18,17 +18,24 @@ const AllProducts = (props) => {
 
     return (
         <div>
-            <Link to={'/api/home'}>
-                <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link>
-                <Link to={'/api/products/new'}><FontAwesomeIcon icon="plus" class="edit-icon"></FontAwesomeIcon></Link>
+                <Link to={'/api/home'}>
+                    <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link>
+                    <h3 id="all-products-title">Your Created Products</h3>
+                <Link to={'/api/products/new'}  id="add-new-product-btn">
+                    <Button type="submit" type="contained">
+                        <FontAwesomeIcon icon="plus"></FontAwesomeIcon>Add a New Product</Button></Link>
 
-            <h3>All Products</h3>
+
             {
                 products.map((product, index) => {
                     console.log("this is a new product: " + product.title);
                     return (
                         <div key={index}>
-                            <Link to={'/api/products/' + product._id}><p class="product">{product.title}</p></Link>
+                            <ul>
+
+                            
+                            <Link to={'/api/products/' + product._id} class="user-made-products"><li class="product">{product.title}</li></Link>
+                            </ul>
                         </div>
                     )
                 })

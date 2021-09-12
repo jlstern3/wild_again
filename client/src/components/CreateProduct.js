@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import ProductForm from './ProductForm';
 import axios from 'axios';
-import {Link, navigate} from '@reach/router';
+import { Link, navigate } from '@reach/router';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const CreateProduct = (props) => {
-    const[errors, setErrors] = useState({});
+    const [errors, setErrors] = useState({});
 
-    const[product, setProduct] = useState({
+    const [product, setProduct] = useState({
         "title": "",
         "description": "",
         "category": "",
@@ -38,10 +39,10 @@ const CreateProduct = (props) => {
         axios.post('http://localhost:8000/api/products', product)
             .then((res) => {
                 console.log(res.data);
-                if(res.data.errors){
+                if (res.data.errors) {
                     setErrors(res.data.errors);
                 }
-                else{
+                else {
                     setProduct(res);
                     navigate('/api/products');
                 }
@@ -50,16 +51,19 @@ const CreateProduct = (props) => {
                 console.log(err);
             })
     }
-        
-    return(
+
+    return (
         <div>
-            <h3>Create Product</h3>
-            <ProductForm 
-                product = {product}
-                setProduct = {setProduct}
+            <Link to={'/api/products'}>
+                <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link>
+
+            <h3 id="create-product-title">Create Product</h3>
+            <ProductForm
+                product={product}
+                setProduct={setProduct}
                 errors={errors}
-                handleSubmit = {handleSubmit}
-                submitButtonLabel = {"Create Product"}
+                handleSubmit={handleSubmit}
+                submitButtonLabel={"Create Product"}
             />
         </div>
     )

@@ -47,45 +47,45 @@ const ProductForm = (props) => {
 
     return (
         <div>
-            <Link to={'/api/products'}>
-                <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link>
+            {/* <Link to={'/api/products'}>
+                <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link> */}
 
             {/* <form onSubmit={(e) => handleSubmit(e)} encType='multipart/form-data'> */}
             <form onSubmit={(e) => handleSubmit(e)}>
                 <p>
-                    <label>Title:</label>
+                    <label class="form-label">Title:</label>
                     {/* {
                         errors.title ?
                             <span className="errors"><Alert color="danger">{errors.title.message}</Alert></span>
                             : null
                     } */}
-                    <input
+                    <input class="form-input"
                         type="text"
                         name="title"
                         value={product.title}
                         onChange={(e) => inputChange(e)} />
                 </p>
                 <p>
-                    <label>Description:</label>
+                    <label class="form-label">Description:</label>
                     {/* {
                         errors.description ?
                             <span className="errors"><Alert color="danger">{errors.description.message}</Alert></span>
                             : null
                     } */}
-                    <input
+                    <input class="form-input"
                         type="text"
                         name="description"
                         value={product.description}
                         onChange={(e) => inputChange(e)} />
                 </p>
-                <div>
-                    <label>Category: </label>
+                <p>
+                    <label class="form-label">Category: </label>
                     {/* {
                         errors.category ?
                             <span className="errors"><Alert color="danger">{errors.category.message}</Alert></span>
                             : null
                     } */}
-                    <select
+                    <select class="form-input"
                         name="category"
                         value={product.category}
                         onChange={(e) => inputChange(e)}>
@@ -97,14 +97,14 @@ const ProductForm = (props) => {
                             ))
                         }
                     </select>
-                </div>
-                <div>
-                    <label>Notes: </label>
-                    <input
+                </p>
+                <p>
+                    <label class="form-label">Notes: </label>
+                    <input class="form-input"
                         name="notes"
                         value={product.notes}
                         onChange={(e) => inputChange(e)}></input>
-                </div>
+                </p>
                 {/* <div> */}
                 {/* <label>Photo: </label>
                     <input

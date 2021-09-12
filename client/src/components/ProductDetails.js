@@ -22,11 +22,11 @@ const ProductDetails = (props) => {
 
     return (
         <div>
-            <h3>Product Details</h3>
-            <h5>Title: {product.title}</h5>
-            <h5>Description: {product.description}</h5>
-            <h5>Category: {product.category}</h5>
-            <h5>Notes: {product.notes}</h5>
+            <h3 id="product-details-title">Product Details</h3>
+            <h5 class="product-details">Title: <span class="product-details-input">{product.title}</span></h5>
+            <h5 class="product-details">Description: <span class="product-details-input">{product.description}</span></h5>
+            <h5 class="product-details">Category: <span class="product-details-input">{product.category}</span></h5>
+            <h5 class="product-details">Notes: <span class="product-details-input">{product.notes}</span></h5>
             <Link to={'/api/products'}>
                 <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link>
             <Link to={'/api/products/' + props.id + '/edit'}><FontAwesomeIcon icon="edit" class="edit-icon"></FontAwesomeIcon></Link>
