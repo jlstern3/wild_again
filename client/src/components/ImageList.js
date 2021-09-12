@@ -18,6 +18,7 @@ import aathrift from '../img/AAThrift.jpg';
 import mailshoppe from '../img/MailShoppe.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from '@reach/router';
+import {UncontrolledTooltip} from 'reactstrap';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -108,10 +109,12 @@ export default function TitlebarImageList() {
                             subtitle={<span><a href={item.website} class="img-list-websites">{item.website}</a></span>}
                             actionIcon={
                                 <IconButton aria-label={`info about ${item.title}`} className={classes.icon}>
-                                    <InfoIcon />
+                                    <InfoIcon id="img-list-tooltip" />
                                 </IconButton>
                             }
                         />
+                        <UncontrolledTooltip placement = "left" target = "img-list-tooltip">Add your new favorite author!</UncontrolledTooltip>
+
                     </ImageListItem>
                 ))}
             </ImageList>
