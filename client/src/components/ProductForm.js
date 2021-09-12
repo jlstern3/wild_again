@@ -47,18 +47,16 @@ const ProductForm = (props) => {
 
     return (
         <div>
-            {/* <Link to={'/api/products'}>
-                <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link> */}
-
             {/* <form onSubmit={(e) => handleSubmit(e)} encType='multipart/form-data'> */}
             <form onSubmit={(e) => handleSubmit(e)}>
                 <p>
-                    <label class="form-label">Title:</label>
-                    {/* {
+                {
                         errors.title ?
                             <span className="errors"><Alert color="danger">{errors.title.message}</Alert></span>
                             : null
-                    } */}
+                    }
+                    <label class="form-label">Title:</label>
+
                     <input class="form-input"
                         type="text"
                         name="title"
@@ -66,12 +64,12 @@ const ProductForm = (props) => {
                         onChange={(e) => inputChange(e)} />
                 </p>
                 <p>
-                    <label class="form-label">Description:</label>
-                    {/* {
+                {
                         errors.description ?
                             <span className="errors"><Alert color="danger">{errors.description.message}</Alert></span>
                             : null
-                    } */}
+                    }
+                    <label class="form-label">Description:</label>
                     <input class="form-input"
                         type="text"
                         name="description"
@@ -79,12 +77,13 @@ const ProductForm = (props) => {
                         onChange={(e) => inputChange(e)} />
                 </p>
                 <p>
-                    <label class="form-label">Category: </label>
-                    {/* {
+                {
                         errors.category ?
                             <span className="errors"><Alert color="danger">{errors.category.message}</Alert></span>
                             : null
-                    } */}
+                    }
+                    <label class="form-label">Category: </label>
+
                     <select class="form-input"
                         name="category"
                         value={product.category}
