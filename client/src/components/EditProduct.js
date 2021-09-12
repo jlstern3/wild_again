@@ -32,7 +32,9 @@ const EditProduct = (props) => {
                     navigate('/api/products/' + id)
                 }
             })
-            .catch(err => console.log(err));
+            .catch((err) => {
+                console.log(err);
+            })
     }
 
     const afterDeleteHandler = () => {
@@ -42,12 +44,14 @@ const EditProduct = (props) => {
     return (
         <div>
             <Link to={"/api/products"}><FontAwesomeIcon icon="chevron-circle-left" class="back-icon" /></Link>
-            <h3 id="edit-title">Edit "{product.title}"</h3>
+            <h3 id="edit-title">Edit Product</h3>
             <ProductForm
                 product={product}
                 setProduct={setProduct}
                 handleSubmit={handleSubmit}
+                errors = {errors}
                 submitButtonLabel={"Update Product"} />
+                
             <DeleteProduct
                 id={props.id}
                 afterDeleteHandler={afterDeleteHandler} />
