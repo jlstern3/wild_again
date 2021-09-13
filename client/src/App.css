@@ -72,6 +72,11 @@ button.MuiButtonBase-root{
   box-shadow: 7px 2px 2px #3F6A48;
 }
 
+button.MuiButtonBase-root.MuiIconButton-root.makeStyles-icon-6{
+  border: none;
+  box-shadow: none;
+}
+
 a{
   text-decoration: none;
   color: black;
@@ -87,6 +92,17 @@ a{
   justify-content: space-between;
   display: flex;
   margin: 20px;
+}
+
+.makeStyles-menuButton-2{
+  box-shadow: none;
+  border: none;
+}
+
+.makeStyles-menuButton-2:hover{
+  box-shadow: none;
+  border: none;
+  color: #DAA82C;
 }
 
 .product{
@@ -159,3 +175,4 @@ p{
 #edit-title{
   margin-bottom: 30px;
 }
+
