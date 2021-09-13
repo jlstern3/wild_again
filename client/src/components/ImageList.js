@@ -23,6 +23,7 @@ import { Link } from '@reach/router';
 // Material UI Tooltip
 import Tooltip from '@material-ui/core/Tooltip';
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
@@ -38,13 +39,17 @@ const useStyles = makeStyles((theme) => ({
     icon: {
         color: 'rgba(255, 255, 255, 0.54)',
     },
-    fab: {
-        margin: theme.spacing(2),
-    },
     absolute: {
         position: 'absolute',
         bottom: theme.spacing(2),
         right: theme.spacing(3),
+    },
+    format: {
+        boxShadow: 'none!important',
+        border: 'none!important',
+    },
+    arrow: {
+        color: theme.palette.common.black,
     },
 }));
 
@@ -53,49 +58,49 @@ const itemData = [
         img: whitelotus,
         title: "White Lotus Farms",
         website: "https://whitelotusfarms.com/",
-        desc: "Placeholder here!"
+        desc: "Wholesome produce, breads, cheeses, and personal hygiene products."
     },
     {
         img: beejoyful,
         title: "Bee Joyful Shop",
         website: "https://beejoyfulshop.com/",
-        desc: "Placeholder here!"
+        desc: "Your one-stop-shop for resuable, sustainable products."
     },
     {
         img: argus,
         title: "Argus Farm Stop",
         website: "https://www.argusfarmstop.com/",
-        desc: "Placeholder here!"
+        desc: "Farmer-consignment shop selling food & sustainable products, along with cafe and bakery."
     },
     {
         img: rtr,
         title: "Raise the Root",
         website: "https://www.raisetherootonline.com/",
-        desc: "Placeholder here!"
+        desc: "Organic, fresh picked vegetables and herbs."
     },
     {
         img: bythepound,
         title: "By The Pound",
         website: "https://www.facebook.com/bythelb/",
-        desc: "Placeholder here!"
+        desc: "Buying in bulk and get the best bang for you buck!"
     },
     {
         img: byoc,
         title: 'BYOC Co.',
         website: 'https://www.byocco.com/',
-        desc: "Placeholder here!"
+        desc: "Bring Your Own Container reduces packaging by having you supply your own."
     },
     {
         img: homeandgarden,
         title: "Downtown Home and Garden",
         website: "http://www.downtownhomeandgarden.com/",
-        desc: "Placeholder here!"
+        desc: "For all your landscaping and gardening needs"
     },
     {
         img: pfc,
         title: "People's Food Co-op",
         website: "https://peoplesfood.coop/newsite/",
-        desc: "Placeholder here!"
+        desc: "Co-op offering wholesome food, sustainable household/cleaning items, and grab-n-go selections."
     },
     {
         img: aathrift,
@@ -129,9 +134,9 @@ export default function TitlebarImageList() {
                             title={item.title}
                             subtitle={<span><a href={item.website} class="img-list-websites">{item.website}</a></span>}
                             actionIcon={
-                            <Tooltip title={item.desc}>
+                            <Tooltip title={item.desc} placement='top' className={classes.format} arrow>
                                 <IconButton aria-label={`info about ${item.title}`} className={classes.icon}>
-                                    <InfoIcon id="img-list-tooltip" />                                
+                                    <InfoIcon />                                
                                 </IconButton>
                                 </Tooltip>
                             }
