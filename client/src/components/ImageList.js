@@ -18,7 +18,10 @@ import aathrift from '../img/AAThrift.jpg';
 import mailshoppe from '../img/MailShoppe.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from '@reach/router';
-import {UncontrolledTooltip} from 'reactstrap';
+
+
+// Material UI Tooltip
+import Tooltip from '@material-ui/core/Tooltip';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -35,6 +38,14 @@ const useStyles = makeStyles((theme) => ({
     icon: {
         color: 'rgba(255, 255, 255, 0.54)',
     },
+    fab: {
+        margin: theme.spacing(2),
+    },
+    absolute: {
+        position: 'absolute',
+        bottom: theme.spacing(2),
+        right: theme.spacing(3),
+    },
 }));
 
 const itemData = [
@@ -42,51 +53,61 @@ const itemData = [
         img: whitelotus,
         title: "White Lotus Farms",
         website: "https://whitelotusfarms.com/",
+        desc: "Placeholder here!"
     },
     {
         img: beejoyful,
         title: "Bee Joyful Shop",
         website: "https://beejoyfulshop.com/",
-    }, 
+        desc: "Placeholder here!"
+    },
     {
         img: argus,
         title: "Argus Farm Stop",
         website: "https://www.argusfarmstop.com/",
+        desc: "Placeholder here!"
     },
     {
         img: rtr,
         title: "Raise the Root",
         website: "https://www.raisetherootonline.com/",
+        desc: "Placeholder here!"
     },
     {
         img: bythepound,
         title: "By The Pound",
         website: "https://www.facebook.com/bythelb/",
+        desc: "Placeholder here!"
     },
     {
         img: byoc,
         title: 'BYOC Co.',
         website: 'https://www.byocco.com/',
+        desc: "Placeholder here!"
     },
     {
         img: homeandgarden,
         title: "Downtown Home and Garden",
         website: "http://www.downtownhomeandgarden.com/",
+        desc: "Placeholder here!"
     },
     {
         img: pfc,
         title: "People's Food Co-op",
         website: "https://peoplesfood.coop/newsite/",
+        desc: "Placeholder here!"
     },
     {
         img: aathrift,
         title: "Ann Arbor PTO Thrift Shop",
         website: "https://www.a2ptothriftshop.org/",
+        desc: "Why buy new when you can buy pre-loved clothing!"
     },
     {
         img: mailshoppe,
         title: "The Mail Shoppe",
         website: "https://mailshoppe.com/",
+        desc: "Eco-friendly packaging."
     },
 ]
 
@@ -98,8 +119,8 @@ export default function TitlebarImageList() {
             <ImageList rowHeight={180} className={classes.imageList}>
 
                 <ImageListItem key="Subheader" cols={2} style={{ height: 'auto' }}>
-                <Link to={'/api/home'} id="img-list-back">
-                <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link><ListSubheader component="div" id="ann-arbor">Ann Arbor Resources</ListSubheader>
+                    <Link to={'/api/home'} id="img-list-back">
+                        <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link><ListSubheader component="div" id="ann-arbor">Ann Arbor Resources</ListSubheader>
                 </ImageListItem>
                 {itemData.map((item) => (
                     <ImageListItem key={item.img}>
@@ -108,13 +129,13 @@ export default function TitlebarImageList() {
                             title={item.title}
                             subtitle={<span><a href={item.website} class="img-list-websites">{item.website}</a></span>}
                             actionIcon={
+                            <Tooltip title={item.desc}>
                                 <IconButton aria-label={`info about ${item.title}`} className={classes.icon}>
-                                    <InfoIcon id="img-list-tooltip" />
+                                    <InfoIcon id="img-list-tooltip" />                                
                                 </IconButton>
+                                </Tooltip>
                             }
                         />
-                        <UncontrolledTooltip placement = "left" target = "img-list-tooltip">Add your new favorite author!</UncontrolledTooltip>
-
                     </ImageListItem>
                 ))}
             </ImageList>
