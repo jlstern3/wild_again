@@ -8,6 +8,7 @@
   max-width: 600px;
   max-height: 600px;
   margin: auto;
+  /* height: 600px; */
   height: auto;
   border-radius: 5px;
   background-color: rgb(212, 235, 224);
@@ -105,6 +106,16 @@ a{
   color: #DAA82C;
 }
 
+#delete-handler{
+  display: inline-block;
+}
+
+/* Tabs */
+.MuiTab-textColorPrimary{
+  border: none!important;
+  box-shadow: none!important;
+}
+
 .product{
   margin: 10px;
   font-size: x-large;
@@ -112,17 +123,8 @@ a{
   text-decoration: none;
 }
 
-#delete-handler{
-  display: inline-block;
-}
 
-#ann-arbor{
-  font-size:larger;
-  color: black;
-  display: inline-block;
-}
-
-
+/* Products */
 .user-made-products{
   text-decoration: none;
 }
@@ -176,3 +178,8 @@ p{
   margin-bottom: 30px;
 }
 
+#ann-arbor{
+  font-size:larger;
+  color: black;
+  display: inline-block;
+}
