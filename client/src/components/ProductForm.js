@@ -2,9 +2,6 @@ import React from 'react';
 import { Button } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Alert } from 'reactstrap';
-import { Link, navigate } from '@reach/router';
-import axios from 'axios';
-
 
 const ProductForm = (props) => {
     const { errors, product, setProduct, handleSubmit, submitButtonLabel } = props;
@@ -44,13 +41,12 @@ const ProductForm = (props) => {
 
 
 
-
     return (
         <div>
             {/* <form onSubmit={(e) => handleSubmit(e)} encType='multipart/form-data'> */}
             <form onSubmit={(e) => handleSubmit(e)}>
                 <p>
-                {
+                    {
                         errors.title ?
                             <span className="errors"><Alert color="danger">{errors.title.message}</Alert></span>
                             : null
@@ -64,7 +60,7 @@ const ProductForm = (props) => {
                         onChange={(e) => inputChange(e)} />
                 </p>
                 <p>
-                {
+                    {
                         errors.description ?
                             <span className="errors"><Alert color="danger">{errors.description.message}</Alert></span>
                             : null
@@ -77,7 +73,7 @@ const ProductForm = (props) => {
                         onChange={(e) => inputChange(e)} />
                 </p>
                 <p>
-                {
+                    {
                         errors.category ?
                             <span className="errors"><Alert color="danger">{errors.category.message}</Alert></span>
                             : null
@@ -114,7 +110,7 @@ const ProductForm = (props) => {
                         onChange={(e) => inputChange(e)}
                     /> */}
                 {/* </div> */}
-                <Button type="submit" type="contained"><FontAwesomeIcon icon="plus"></FontAwesomeIcon>{submitButtonLabel}</Button>
+                    <Button type="submit" type="contained"><FontAwesomeIcon icon="plus"></FontAwesomeIcon>{submitButtonLabel}</Button>
             </form>
         </div>
     )

@@ -6,6 +6,7 @@ import DeleteProduct from './DeleteProduct';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
+
 const EditProduct = (props) => {
     const { id } = props;
     const [product, setProduct] = useState({});
