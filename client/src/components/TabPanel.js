@@ -23,7 +23,9 @@ function TabPanel(props) {
             >
                             <Link to={'/api/home'}>
             
-            <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link>
+            <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link>            
+            <h2 id="tips-title">General Tips for...</h2>
+
                 {value === index && (
                     <Box p={3}>
                         <Typography>{children}</Typography>
@@ -66,7 +68,7 @@ export default function ScrollableTabsButtonAuto() {
     return (
         <div className={classes.root}>
             <TabPanel value={value} index={0}>
-                <h3>General Tips for Household Items: </h3>
+                <h3 class="tab-title">Household Items: </h3>
                 <ul>
                     <li>Glass tupperware containers</li>
                     <li>Washable napkins</li>
@@ -75,6 +77,7 @@ export default function ScrollableTabsButtonAuto() {
                 </ul>
             </TabPanel>
             <TabPanel value={value} index={1}>
+            <h3 class="tab-title">Cleaning Products: </h3>
                 <ul>
                     <li>1:1 vinegar:water cleaning spray</li>
                     <li>Baking soda</li>
@@ -82,19 +85,38 @@ export default function ScrollableTabsButtonAuto() {
                 </ul>
             </TabPanel>
             <TabPanel value={value} index={2}>
-                Examples of Laundry
+            <h3 class="tab-title">Laundry Products: </h3>
+                <ul>
+                    <li>Placholder</li>
+                </ul>
             </TabPanel>
             <TabPanel value={value} index={3}>
-                Examples of Home System Designs
+            <h3 class="tab-title">Home System Designs: </h3>
+                <ul>
+                    <li>Placholder</li>
+                </ul>
+                
             </TabPanel>
             <TabPanel value={value} index={4}>
-                Examples of Personal Hygiene
+            <h3 class="tab-title">Personal Hygiene: </h3>
+                <ul>
+                    <li>Placholder</li>
+                </ul>
+                
             </TabPanel>
             <TabPanel value={value} index={5}>
-                Examples of Clothing
+            <h3 class="tab-title">Clothing: </h3>
+                <ul>
+                    <li>Buy second hand!</li>
+                </ul>
+                
             </TabPanel>
             <TabPanel value={value} index={6}>
-                Examples of Outdoor Gear
+            <h3 class="tab-title">Outdoor Gear: </h3>
+                <ul>
+                    <li>Placholder</li>
+                </ul>
+            
             </TabPanel>
             <AppBar position="static" color="default">
                 <Tabs
