@@ -40,7 +40,7 @@ const ProductDetails = (props) => {
     const classes = useStyles();
 
     return (
-        <div>
+        <div class="white-bg">
             <h3 id="product-details-title">Product Details</h3>
             <h5 class="product-details">Title: <span class="product-details-input">{product.title}</span></h5>
             <h5 class="product-details">Description: <span class="product-details-input">{product.description}</span></h5>

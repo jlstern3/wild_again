@@ -93,7 +93,7 @@ const ProductForm = (props) => {
                         }
                     </select>
                 </p>
-                <p>
+                <p id="product-notes">
                     <label class="form-label">Notes: </label>
                     <input class="form-input"
                         name="notes"

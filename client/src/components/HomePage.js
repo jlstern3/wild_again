@@ -4,10 +4,13 @@ import { Link } from '@reach/router';
 
 const HomePage = () => {
     return(
-        <div>
-            <h1>This is the home page displaying</h1>
-            <h3>Your decisions impacts our planet. Placeholder blurb for app -- why it's important to shop locally, reduce waste, etc.</h3>
-            <h5>With all this being said, click on a link below to get started on your sustainable living journey!</h5>
+        <div class="white-bg">
+            <h1 id="conscious-consumer">Be a conscious consumer.</h1>
+            <div>
+            <h3 class="home-pg-subtitle">Your decisions impact yourself, your community and the Earth.</h3>
+            <p class="home-pg-subtitle">Live more sustainably by reducing waste and choosing reusable, plastic-free, ethically-produced products.  Show your local businesses some love!</p>
+            </div>
+            <h5 id="click-home-pg-btns">Click on a button below to get started on your more sustainable living journey!</h5>
             <div class="home-pg-btns">
             <Button type="contained"><Link to ="/api/products">All Your Products</Link></Button>
             <Button type="contained"><Link to ="/api/products/local">Shop Local</Link></Button>

@@ -1,10 +1,18 @@
 import React from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Tooltip from '@material-ui/core/Tooltip';
+
+
+import { makeStyles } from '@material-ui/core/styles';
+
+import DeleteIcon from '@material-ui/icons/Delete';
+import IconButton from '@material-ui/core/IconButton';
+
 
 
 const DeleteProduct = (props) => {
-    const {id, afterDeleteHandler} = props;
+    const { id, afterDeleteHandler } = props;
 
     const deleteHandler = (e, id) => {
         e.preventDefault();
@@ -14,12 +22,28 @@ const DeleteProduct = (props) => {
                 afterDeleteHandler(id);
             })
             .catch((err) => {
-				console.log(err);
-			})
+                console.log(err);
+            })
     }
-    return(
+    const useStyles = makeStyles((theme) => ({
+        fab: {
+            margin: theme.spacing(2),
+        },
+        absolute: {
+            position: 'absolute',
+            bottom: theme.spacing(2),
+            right: theme.spacing(3),
+        },
+    }));
+
+    const classes = useStyles();
+
+    return (
         <div id="delete-handler">
-            <FontAwesomeIcon icon="trash-alt" class="delete-icon" onClick={(e)=>deleteHandler(e,id)}></FontAwesomeIcon>
+            <Tooltip title='HELLO WORLD' placement='top'> 
+            <FontAwesomeIcon icon="trash-alt" class="delete-icon" onClick={(e) => deleteHandler(e, id)}></FontAwesomeIcon>
+            </Tooltip>
+
         </div>
     )
 }

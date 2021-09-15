@@ -22,7 +22,7 @@ const AllProducts = (props) => {
                 <Link to={'/api/home'}>
                     <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link>
                     <h3 id="all-products-title">Your Products</h3>
-                    <p id="all-products-subtitle">Make this space your own!  Keep track of eco-friendly products you want to find, have & love, or want to gift in the future.</p>
+                    <p id="all-products-subtitle">Make this space your own!  Keep track of eco-friendly products you want to find, that you have & love, or ones that you want to gift in the future.  Click on the product for details.</p>
                 <Link to={'/api/products/new'}  id="add-new-product-btn">
                     <Button type="submit" type="contained">
                         <FontAwesomeIcon icon="plus"></FontAwesomeIcon>Add a New Product</Button></Link>

@@ -43,7 +43,7 @@ const EditProduct = (props) => {
     }
 
     return (
-        <div>
+        <div class="white-bg">
             <Link to={"/api/products"}><FontAwesomeIcon icon="chevron-circle-left" class="back-icon" /></Link>
             <h3 id="edit-title">Edit Product</h3>
             <ProductForm

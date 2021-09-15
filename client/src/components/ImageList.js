@@ -6,6 +6,7 @@ import ImageListItemBar from '@material-ui/core/ImageListItemBar';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
+
 import whitelotus from '../img/WhiteLotus.jpg';
 import bythepound from '../img/ByThePound.jpg';
 import rtr from '../img/RaiseTheRoot.jpg';
@@ -16,6 +17,7 @@ import homeandgarden from '../img/Downtown-Home-Garden.jpg';
 import byoc from '../img/BYOC.jpg';
 import aathrift from '../img/AAThrift.jpg';
 import mailshoppe from '../img/MailShoppe.jpg';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from '@reach/router';
 
@@ -48,9 +50,9 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: 'none!important',
         border: 'none!important',
     },
-    arrow: {
-        color: theme.palette.common.black,
-    },
+    // arrow: {
+    //     color: theme.palette.common.black,
+    // },
 }));
 
 const itemData = [
@@ -58,61 +60,61 @@ const itemData = [
         img: whitelotus,
         title: "White Lotus Farms",
         website: "https://whitelotusfarms.com/",
-        desc: "Wholesome produce, breads, cheeses, and personal hygiene products."
+        desc: "Organic, lovingly made local food and self care products."
     },
     {
         img: beejoyful,
         title: "Bee Joyful Shop",
         website: "https://beejoyfulshop.com/",
-        desc: "Your one-stop-shop for resuable, sustainable products."
+        desc: "Your one-stop-shop for reusable, plastic-free, zero-waste products."
     },
     {
         img: argus,
         title: "Argus Farm Stop",
         website: "https://www.argusfarmstop.com/",
-        desc: "Farmer-consignment shop selling food & sustainable products, along with cafe and bakery."
+        desc: "Growing the local food economy by selling produce, meats and other artisan products from Michigan producers."
     },
     {
         img: rtr,
         title: "Raise the Root",
         website: "https://www.raisetherootonline.com/",
-        desc: "Organic, fresh picked vegetables and herbs."
+        desc: "Vibrant, aromatic, organic herbs and veggies grown with love and care for you and the Earth."
     },
     {
         img: bythepound,
         title: "By The Pound",
         website: "https://www.facebook.com/bythelb/",
-        desc: "Buying in bulk and get the best bang for you buck!"
+        desc: "Bulk food store offering everything from tea to exotic candies."
     },
     {
         img: byoc,
         title: 'BYOC Co.',
         website: 'https://www.byocco.com/',
-        desc: "Bring Your Own Container reduces packaging by having you supply your own."
+        desc: "Refill your own containers with eco-friendly, ethically produced clearning and personal care products."
     },
     {
         img: homeandgarden,
         title: "Downtown Home and Garden",
         website: "http://www.downtownhomeandgarden.com/",
-        desc: "For all your landscaping and gardening needs"
+        desc: "Over a century of selling quality products for all your landscaping and gardening needs."
     },
     {
         img: pfc,
         title: "People's Food Co-op",
         website: "https://peoplesfood.coop/newsite/",
-        desc: "Co-op offering wholesome food, sustainable household/cleaning items, and grab-n-go selections."
+        desc: "Community owned grocery store offering wholesome food, sustainable household/cleaning items, and grab-n-go selections."
     },
     {
         img: aathrift,
         title: "Ann Arbor PTO Thrift Shop",
         website: "https://www.a2ptothriftshop.org/",
-        desc: "Why buy new when you can buy pre-loved clothing!"
+        desc: "Local, nonprofit thrift shop supporting Ann Arbor Public Schools."
     },
     {
         img: mailshoppe,
         title: "The Mail Shoppe",
         website: "https://mailshoppe.com/",
-        desc: "Eco-friendly packaging."
+        desc: "Pack and ship virtually anything in an eco-friendly way!"
     },
 ]
 
@@ -134,7 +136,8 @@ export default function TitlebarImageList() {
                             title={item.title}
                             subtitle={<span><a href={item.website} class="img-list-websites">{item.website}</a></span>}
                             actionIcon={
-                            <Tooltip title={item.desc} placement='top' className={classes.format} arrow>
+                            // <Tooltip title={item.desc} placement='top' className={classes.format} arrow>
+                            <Tooltip title={item.desc} placement='top' className={classes.format}>
                                 <IconButton aria-label={`info about ${item.title}`} className={classes.icon}>
                                     <InfoIcon />                                
                                 </IconButton>

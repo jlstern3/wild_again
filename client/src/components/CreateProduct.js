@@ -53,7 +53,7 @@ const CreateProduct = (props) => {
     }
 
     return (
-        <div>
+        <div class="white-bg">
             <Link to={'/api/products'}>
                 <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link>
 
