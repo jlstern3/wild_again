@@ -47,6 +47,10 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+#app-title:hover{
+  color: #DAA82C;
+}
+
 #edit-title{
   margin-bottom: 30px!important;
 }
