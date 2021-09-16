@@ -7,7 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import {Link} from '@reach/router';
+import { Link } from '@reach/router';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -70,7 +70,7 @@ const Navbar = () => {
                             onClose={handleClose}
                         >
                             <MenuItem onClick={handleClose}><Link to="/api/home" class="user-made-products">Home</Link></MenuItem>
-                            <MenuItem onClick={handleClose}><Link to="/api/products/tips" class="user-made-products">Helpful Tips</Link></MenuItem>
+                            <MenuItem onClick={handleClose}><Link to="/api/products/tips" class="user-made-products">Tips & Tricks</Link></MenuItem>
                             <MenuItem onClick={handleClose}><Link to="/api/products/local" class="user-made-products">Shop Local</Link></MenuItem>
                             <MenuItem onClick={handleClose}><Link to="/api/products" class="user-made-products">Your Products</Link></MenuItem>
                             <MenuItem onClick={handleClose}><Link to="/api/products/new" class="user-made-products">Create Product</Link></MenuItem>

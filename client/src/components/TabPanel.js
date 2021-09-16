@@ -152,6 +152,10 @@ export default function ScrollableTabsButtonAuto() {
                     <li>Always buy sweatshop free, fair trade clothing</li>
                     <li>Opt for natural fibers</li>
                     <li>Host a clothing swap with your friends/family</li>
+                    <li>Donate, donate, donate</li>
+                    <li>Try upcycling your favorite tee into a crop top to give it a second life (great for jeans to shorts too!)</li>
+                    <li>Before giving up on a hole-y garment, try sewing it yourself first</li>
+                    <li>Reduce dry cleaning</li>
                 </ul>
             
             </TabPanel>

@@ -14,7 +14,7 @@
   border-radius: 5px;
   background-color: rgb(212, 235, 224);
   padding: 20px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 .white-bg{
@@ -38,8 +38,9 @@
 }
 
 
-/* Titles */
 
+
+/* Titles */
 #app-title{
   text-decoration: none;
   color: white;
@@ -107,6 +108,7 @@ h1, h2, h4, h6 {
 
 #conscious-consumer{
   margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .tab-title{
@@ -117,6 +119,7 @@ h1, h2, h4, h6 {
 li{
   padding-bottom: 5px;
 }
+
 /* Icons */
 .back-icon{
   width: 25px;
@@ -210,6 +213,10 @@ a{
   text-decoration: none;
 }
 
+div.MuiTabs-root{
+  height: 65px;
+  padding-bottom: 10px;
+}
 
 /* Products */
 .user-made-products{
@@ -263,3 +270,13 @@ input.form-input{
 }
 
 
+/* Image List */
+.MuiImageListItemBar-title{
+  font-weight: bold;
+}
+
+#scrollable-auto-tabpanel-0, #scrollable-auto-tabpanel-1, #scrollable-auto-tabpanel-2, #scrollable-auto-tabpanel-3, #scrollable-auto-tabpanel-4, #scrollable-auto-tabpanel-5, #scrollable-auto-tabpanel-6{
+  height: 400px;
+  overflow-y: scroll;
+  padding-bottom: 10px;
+}
