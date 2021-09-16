@@ -70,10 +70,10 @@ const Navbar = () => {
                             onClose={handleClose}
                         >
                             <MenuItem onClick={handleClose}><Link to="/api/home" class="user-made-products">Home</Link></MenuItem>
+                            <MenuItem onClick={handleClose}><Link to="/api/products/tips" class="user-made-products">Helpful Tips</Link></MenuItem>
                             <MenuItem onClick={handleClose}><Link to="/api/products/local" class="user-made-products">Shop Local</Link></MenuItem>
                             <MenuItem onClick={handleClose}><Link to="/api/products" class="user-made-products">Your Products</Link></MenuItem>
                             <MenuItem onClick={handleClose}><Link to="/api/products/new" class="user-made-products">Create Product</Link></MenuItem>
-                            <MenuItem onClick={handleClose}><Link to="/api/products/tips" class="user-made-products">Helpful Tips</Link></MenuItem>
                         </Menu>
                     </div>
                 </Toolbar>
