@@ -7,12 +7,12 @@ const ProductForm = (props) => {
     const { errors, product, setProduct, handleSubmit, submitButtonLabel } = props;
 
     const category = [
-        'Grocery',
+        'Kitchen', 
+        'Food', 
+        'On-the-Go',
+        'Laundry',
         'Cleaning',
-        'Personal Hygiene',
-        'Household',
-        'Outdoor Systems',
-        'Adventure Gear',
+        'Personal Care',
         'Clothing',
         'Miscellaneous',
     ];
@@ -94,6 +94,11 @@ const ProductForm = (props) => {
                     </select>
                 </p>
                 <p id="product-notes">
+                {
+                        errors.notes ?
+                            <span className="errors"><Alert color="danger">{errors.notes.message}</Alert></span>
+                            : null
+                    }
                     <label class="form-label">Notes: </label>
                     <input class="form-input"
                         name="notes"

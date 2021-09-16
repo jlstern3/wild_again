@@ -15,12 +15,12 @@ const ProductSchema = new mongoose.Schema({
         type: String,
         required: [true, "You must pick a category for this product."],
         enum: [
-            'Grocery', 
-            'Cleaning', 
-            'Personal Hygiene',
-            'Household',
-            'Outdoor Systems',
-            'Adventure Gear',
+            'Kitchen', 
+            'Food', 
+            'On-the-Go',
+            'Laundry',
+            'Cleaning',
+            'Personal Care',
             'Clothing',
             'Miscellaneous',
         ],
@@ -28,7 +28,8 @@ const ProductSchema = new mongoose.Schema({
     },
     notes: {
         type: String,
-        required: false,
+        required: [true, "You must write a note about this product."],
+        minlength: [2, "Notes must be at least two characters long."],
     }
     // photo: {
     //     type: String,
