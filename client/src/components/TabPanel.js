@@ -24,7 +24,7 @@ function TabPanel(props) {
                             <Link to={'/api/home'}>
             
             <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link>            
-            <h2 id="tips-title">General Tips for...</h2>
+            <h2 id="tips-title">Tips & Tricks</h2>
 
                 {value === index && (
                     <Box p={3}>
@@ -68,7 +68,7 @@ export default function ScrollableTabsButtonAuto() {
     return (
         <div className={classes.root}>
             <TabPanel value={value} index={0}>
-                <h3 class="tab-title">Kitchen Items: </h3>
+                <h3 class="tab-title">Kitchen: </h3>
                 <ul>
                     <li>Replace plastic resealable containers with glass containers</li>
                     <li>Replace single-use napkins with washable ones</li>
@@ -108,7 +108,7 @@ export default function ScrollableTabsButtonAuto() {
                 </ul>
             </TabPanel>
             <TabPanel value={value} index={3}>
-            <h3 class="tab-title">Laundry Products: </h3>
+            <h3 class="tab-title">Laundry: </h3>
                 <ul>
                     <li>Replace dryer sheets with natural wool dryer balls</li>
                     <li>Only run full loads of laundry</li>
@@ -121,7 +121,7 @@ export default function ScrollableTabsButtonAuto() {
                 
             </TabPanel>
             <TabPanel value={value} index={4}>
-            <h3 class="tab-title">Cleaning Products: </h3>
+            <h3 class="tab-title">Cleaning: </h3>
                 <ul>
                     <li>Stock up on the following ingredients: white vinegar, baking soda, borax, hydrogen peroxide, lemon juice, liquid castile soap, corn meal, olive oil, ethically-produced essential oils</li>
                     <li>Do a quick Google search of the above ingredients for quick DIY cleaners for all parts of your house</li>
