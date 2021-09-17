@@ -153,6 +153,10 @@ li{
   display: inline-block;
 }
 
+.svg-inline--fa{
+  padding-right: 7px;
+}
+
 
 /* Base Buttons */
 .MuiButtonBase-root:hover{
