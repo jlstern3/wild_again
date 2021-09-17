@@ -2,8 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Tooltip from '@material-ui/core/Tooltip';
-
-
 import { makeStyles } from '@material-ui/core/styles';
 
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -25,10 +23,8 @@ const DeleteProduct = (props) => {
                 console.log(err);
             })
     }
+
     const useStyles = makeStyles((theme) => ({
-        fab: {
-            margin: theme.spacing(2),
-        },
         absolute: {
             position: 'absolute',
             bottom: theme.spacing(2),
@@ -38,11 +34,12 @@ const DeleteProduct = (props) => {
 
     const classes = useStyles();
 
+
     return (
         <div id="delete-handler">
-            <Tooltip title='Delete' placement='top'> 
+            {/* <Tooltip title='Delete' placement='top'>  */}
             <FontAwesomeIcon icon="trash-alt" class="delete-icon" onClick={(e) => deleteHandler(e, id)}></FontAwesomeIcon>
-            </Tooltip>
+            {/* </Tooltip> */}
 
         </div>
     )
