@@ -40,7 +40,7 @@ const DeleteProduct = (props) => {
 
     return (
         <div id="delete-handler">
-            <Tooltip title='HELLO WORLD' placement='top'> 
+            <Tooltip title='Delete' placement='top'> 
             <FontAwesomeIcon icon="trash-alt" class="delete-icon" onClick={(e) => deleteHandler(e, id)}></FontAwesomeIcon>
             </Tooltip>
 

@@ -29,7 +29,6 @@ const EditProduct = (props) => {
                     setErrors(res.data.errors)
                 }
                 else {
-                    //make sure this is the right route -- proper slashes
                     navigate('/api/products/' + id)
                 }
             })

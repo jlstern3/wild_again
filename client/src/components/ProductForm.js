@@ -17,33 +17,17 @@ const ProductForm = (props) => {
         'Miscellaneous',
     ];
 
-
-
-    // const inputChange = (e) => {
-    //     setNewProduct({ ...product, [e.target.name]: e.target.value });
-    // }
-
-    // const handlePhoto = (e) => {
-    //     setNewProduct({ ...product, photo: e.target.files[0] });
-    // }
-
     const inputChange = (e) => {
         console.log('input name: ' + e.target.name);
         console.log('input value: ' + e.target.value);
 
-        // set new values to the copied object
         let newProductObject = { ...product };
         newProductObject[e.target.name] = e.target.value;
         setProduct(newProductObject);
     }
-    // newProductObject.photo = e.target.files[0];
-    // newProductObject.photo = e.target.files
-
-
 
     return (
         <div>
-            {/* <form onSubmit={(e) => handleSubmit(e)} encType='multipart/form-data'> */}
             <form onSubmit={(e) => handleSubmit(e)}>
                 <p>
                     {
@@ -84,7 +68,6 @@ const ProductForm = (props) => {
                         name="category"
                         value={product.category}
                         onChange={(e) => inputChange(e)}>
-                        {/* blank first option line in dropdown */}
                         <option value=""></option>
                         {
                             category.map((productCategory, index) => (
@@ -105,16 +88,6 @@ const ProductForm = (props) => {
                         value={product.notes}
                         onChange={(e) => inputChange(e)}></input>
                 </p>
-                {/* <div> */}
-                {/* <label>Photo: </label>
-                    <input
-                        type="file"
-                        name="photo"
-                        accept=".png, .jpg, .jpeg"
-                        value={product.photo}
-                        onChange={(e) => inputChange(e)}
-                    /> */}
-                {/* </div> */}
                     <Button type="submit" type="contained"><FontAwesomeIcon icon="plus"></FontAwesomeIcon>{submitButtonLabel}</Button>
             </form>
         </div>

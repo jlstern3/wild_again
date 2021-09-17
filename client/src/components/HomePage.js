@@ -7,7 +7,7 @@ const HomePage = () => {
         <div class="white-bg">
             <h1 id="conscious-consumer">Be a conscious consumer.</h1>
             <div>
-            <h3 class="home-pg-subtitle">Your decisions impact yourself, your community and the Earth.</h3>
+            <h3 class="home-pg-subtitle">Your decisions impact yourself, your community, and the Earth.</h3>
             <p class="home-pg-subtitle">Live more sustainably by reducing waste and choosing reusable, plastic-free, ethically-produced products.  Show your local businesses some love!</p>
             </div>
             <h5 id="click-home-pg-btns">Click on a button below to optimize your sustainable living journey!</h5>

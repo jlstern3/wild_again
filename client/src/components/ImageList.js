@@ -6,6 +6,9 @@ import ImageListItemBar from '@material-ui/core/ImageListItemBar';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from '@reach/router';
+import Tooltip from '@material-ui/core/Tooltip';
 
 import whitelotus from '../img/WhiteLotus.jpg';
 import bythepound from '../img/ByThePound.jpg';
@@ -18,12 +21,7 @@ import byoc from '../img/BYOC.jpg';
 import aathrift from '../img/AAThrift.jpg';
 import mailshoppe from '../img/MailShoppe.jpg';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from '@reach/router';
 
-
-// Material UI Tooltip
-import Tooltip from '@material-ui/core/Tooltip';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -50,9 +48,6 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: 'none!important',
         border: 'none!important',
     },
-    // arrow: {
-    //     color: theme.palette.common.black,
-    // },
 }));
 
 const itemData = [
@@ -150,5 +145,3 @@ export default function TitlebarImageList() {
         </div>
     );
 }
-
-// export default ImageList;

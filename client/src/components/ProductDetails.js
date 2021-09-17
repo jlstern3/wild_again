@@ -4,9 +4,9 @@ import { Link, navigate } from '@reach/router';
 import DeleteProduct from './DeleteProduct';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-// Tooltip
 import Tooltip from '@material-ui/core/Tooltip';
 import { makeStyles } from '@material-ui/core/styles';
+
 
 const ProductDetails = (props) => {
     const { id } = props;
@@ -31,10 +31,6 @@ const ProductDetails = (props) => {
             bottom: theme.spacing(2),
             right: theme.spacing(3),
         },
-        // format: {
-        //     boxShadow: 'none!important',
-        //     border: 'none!important',
-        // },
     }));
 
     const classes = useStyles();
