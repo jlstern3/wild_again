@@ -244,6 +244,9 @@ ul{
   margin-left: 20px;
 }
 
+span.MuiTab-wrapper{
+  font-weight: bold;
+}
 
 /* Form Labels/Inputs */
 .product-details, .form-label{
