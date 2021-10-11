@@ -36,7 +36,7 @@ const AllProducts = (props) => {
                             </ul>
                         </div>
                     )
-                })
+                }).reverse()
             }
 
         </div>
