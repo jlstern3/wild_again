@@ -43,13 +43,17 @@ const ProductDetails = (props) => {
             <h5 class="product-details">Category: <span class="product-details-input">{product.category}</span></h5>
             <h5 class="product-details">Notes: <span class="product-details-input">{product.notes}</span></h5>
             <Tooltip title='Back' placement='bottom' >
-            <Link to={'/api/products'}>
-                <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link></Tooltip>
+                <Link to={'/api/products'}>
+                    <FontAwesomeIcon icon="chevron-circle-left" class="back-icon"></FontAwesomeIcon></Link>
+            </Tooltip>
             <Tooltip title='Edit' placement='bottom'>
-            <Link to={'/api/products/' + props.id + '/edit'}><FontAwesomeIcon icon="edit" class="edit-icon"></FontAwesomeIcon></Link></Tooltip>
+                <Link to={'/api/products/' + props.id + '/edit'}><FontAwesomeIcon icon="edit" class="edit-icon"></FontAwesomeIcon></Link>
+            </Tooltip>
+            <Tooltip title='Delete' placement='bottom'> 
             <DeleteProduct
                 id={props.id}
                 afterDeleteHandler={afterDeleteHandler} />
+            </Tooltip>
         </div>
     )
 }

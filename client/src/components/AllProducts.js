@@ -38,7 +38,6 @@ const AllProducts = (props) => {
                     )
                 }).reverse()
             }
-
         </div>
     )
 }
