@@ -2,7 +2,7 @@
 
 <h2>Be a conscious consumer.</h2>
 
-<p>Your decisions impact yourself, your community, and the Earth -- which is exactly why Wild Again was created!  This app helps users live more sustainably by providing information and resources to reduce waste and choose reusable, plastic-free, ethically-produced products, preferrably from local businesses. </p> 
+<p>Your decisions impact yourself, your community, and the Earth -- which is exactly why Wild Again was created!  This app helps users live more sustainably by providing information and resources to reduce waste and choose reusable, plastic-free, ethically-produced products from local businesses. </p> 
 
 <h3>Features of this app: </h3>
 <ul>
