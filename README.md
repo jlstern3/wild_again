@@ -3,7 +3,10 @@
 <h2>Be a conscious consumer.</h2>
 
 <p>Your decisions impact yourself, your community, and the Earth -- which is exactly why Wild Again was created!  This app helps users live more sustainably by providing information and resources to reduce waste and choose reusable, plastic-free, ethically-produced products from local businesses. </p> 
-
+<hr>
+<h3>Demo</h3>
+<img src="client/src/gifs/Wild_Again.gif" alt="Wild Again Demo">
+<hr>
 <h3>Features of this app: </h3>
 <ul>
   <li>Custom built API from scratch</li>
@@ -23,11 +26,10 @@
   <li>Informative tooltips</li>
 </ul>
 
-
+<hr>
 <h3>Technologies Used </h3>
 <p>JavaScript | JSX | ES6 | HTML5 | CSS | React | Express | MongoDB | Node.js | Mongoose | Postman | Axios | Cors | Reach Router | Nodemon | Material-UI | Reactstrap | Font Awesome | Git | GitHub | VSCode
 
-<h3>Demo</h3>
-
+<hr>
 <h3>Author</h3>
 <p>Jessica Stern: github.com/jlstern3</p>
