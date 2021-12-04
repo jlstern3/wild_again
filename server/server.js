@@ -18,5 +18,8 @@ require('./config/mongoose.config');
 // connect routes
 require('./routes/product.route') (app);
 
+// connect login, logout, register routes
+require('./routes/user.route')(app);
+
 // have server listen on port
 app.listen(port, () => console.log(`Server is listening on Port ${port}`));
